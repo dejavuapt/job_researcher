@@ -4,4 +4,6 @@ version = "0.0.1"
 description = "search job vacancies in resources"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "click>=8.3.0",
+]
