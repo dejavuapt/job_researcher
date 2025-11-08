@@ -1,4 +1,6 @@
 import click
+from app.database.backend import SQLiteDb
+import os
 
 @click.group()
 @click.pass_context
@@ -21,3 +23,8 @@ def delete() -> None:
 def update() -> None:
     pass
  
+# temporary
+@den.command()
+@click.option('-p', '--path', default=os.path.dirname(os.path.realpath(__file__)), help='path of init db')
+def db(path: str) -> None:
+    SQLiteDb(path)
